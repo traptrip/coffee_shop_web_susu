@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>COFFEE</title>
+	<link rel="stylesheet" href="../static/styles/slide.css">
+    <link rel="stylesheet" href="../static/styles/simple-grid.css">
+    <link rel="stylesheet" href="../static/styles/gallery.css">
+    <link rel="stylesheet" href="../static/styles/products-grid.css">
+    <link rel="stylesheet" href="../static/styles/contacts-grid.css">
+    <link rel="stylesheet" href="../static/styles/cart_css.css">
+    <link rel="stylesheet" href="../static/styles/registration_form.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <input id="slide-1" type="radio" name="slides" checked>
+        <section class="slide slide-one"></section>
+        <input id="slide-2" type="radio" name="slides">
+        <section class="slide slide-two"></section>
+        <input id="slide-3" type="radio" name="slides">
+        <section class="slide slide-three"></section>
+        <div id="active">
+            <label for="slide-1"></label>
+            <label for="slide-2"></label>
+            <label for="slide-3"></label>
+        </div> 
+    </div>
+
+    <header>
+        <div class="mini_logo">
+            <a href="http://github.com/traptrip"><img src="../static/img/bg_imgs/mini_logo.svg" alt="" class="img-responsive"></a>
+        </div>
+        <div id="about">
+            <a href="#sales" title="Акции">Акции</a>
+            <a href="#menu" title="Меню">Меню</a>
+            <a href="#gallery" title="Галерея">Галерея</a>
+            <a href="#contacts" title="Контакты">Контакты</a>
+            <a href="#" class="nav-elements" id="cart" onclick="openForm()"><span class="counter display">0</span></a>
+<!--            <a href="cart.html" title="Корзина">Корзина</a>-->
+        </div>
+    </header>
+
+    <div class="main_page">
+        <div id="big_logo">
+            <img src="../static/img/bg_imgs/big_logo.svg" alt="" class="img-responsive">
+        </div>
+        <div class="text_main_page">
+            <div id="main_text1">
+                <p><strong>УЮТНАЯ </strong></p>
+                <p><strong>АТМОСФЕРА</strong></p>
+            </div>
+            <div id="main_text2">
+                <p>На протяжении многих лет мы создаём тёплую</p>
+                <p>и уютную обстановку,
+                <p>чтобы вы могли чувствовать себя как дома</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="sales">
+        <div class="head_text">Акции</div>
+        <div class="sales_grid">
+          <figure class="sales_grid__item sales_grid__item--1">
+              <div class="img-text-class">
+                  <img src="../static/img/grid_images/rect1.png" class="sales_grid__img" alt="Image 1">
+                  <div class="top-left">
+                      <p class="upper-text">День рождения?</p>
+                      <p>Венская вафля с карамелью в подарок</p>
+                  </div>
+              </div>
+          </figure>
+          <figure class="sales_grid__item sales_grid__item--2">
+              <div class="img-text-class">
+                  <img src="../static/img/grid_images/rect2.png" class="sales_grid__img" alt="Image 2">
+                  <div class="top-left">
+                      <div class="upper-text">КОМБО</div><div>тирамису + капучино</div>
+                  </div>
+              </div>
+          </figure>
+          <figure class="sales_grid__item sales_grid__item--3">
+              <div class="img-text-class">
+                  <img src="../static/img/grid_images/rect3.png" class="sales_grid__img" alt="Image 2">
+                  <div class="top-left">
+                      <p class="upper-text">латте в подарок</p>
+                      <p>при заказе омлета маленький латте в подарок</p>
+                  </div>
+              </div>
+          </figure>
+          <figure class="sales_grid__item sales_grid__item--4">
+              <div class="img-text-class">
+                  <img src="../static/img/grid_images/rect4.png" class="sales_grid__img" alt="Image 2">
+                  <div class="top-left">
+                      <p class="upper-text">приложение</p>
+                      <p>Скачайте приложение и получите скидку 10% на любой заказ</p>
+                  </div>
+              </div>
+          </figure>
+          <figure class="sales_grid__item sales_grid__item--5">
+              <div class="img-text-class">
+                  <img src="../static/img/grid_images/rect5.png" class="sales_grid__img" alt="Image 2">
+                  <div class="top-left">
+                      <p class="upper-text">осенние новинки</p>
+                      <p>Попробуйте новую тыквенную вафлю</p>
+                  </div>
+              </div>
+          </figure>
+        </div>
+    </div>
+
+    <div id="menu">
+        <div class="head_text">меню</div>
+        <section class="cards">
+
+            <div class="product-item">
+                <img src="../static/img/menu_images/Rectangle%2034(1).png">
+                <div class="product-list">
+                    <span class="coffee-title upper-text">
+                        американо
+                    </span>
+                    <span class="price">99 ₽</span>
+                    <button href="" class="button add">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="../static/img/menu_images/Rectangle%2034(2).png">
+                <div class="product-list">
+                    <span class="coffee-title upper-text">
+                        капучино
+                    </span>
+                    <span class="price card-price">149 ₽</span>
+                    <button href="" class="button add">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="../static/img/menu_images/Rectangle%2034(3).png">
+                <div class="product-list">
+                    <span class="coffee-title upper-text">
+                        латте
+                    </span>
+                    <span class="price card-price">139 ₽</span>
+                    <button href="" class="button add">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="../static/img/menu_images/Rectangle%2034(4).png">
+                <div class="product-list">
+                    <span class="coffee-title upper-text">
+                        флэт уайт
+                    </span>
+                    <span class="price card-price">169 ₽</span>
+                    <button href="" class="button add">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="../static/img/menu_images/Rectangle%2034(5).png">
+                <div class="product-list">
+                    <span class="coffee-title upper-text">
+                        раф
+                    </span>
+                    <span class="price card-price">129 ₽</span>
+                    <button href="" class="button add">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="../static/img/menu_images/Rectangle%2034(6).png">
+                <div class="product-list">
+                    <span class="coffee-title upper-text">
+                        моккачино
+                    </span>
+                    <span class="price card-price">179 ₽</span>
+                    <button href="" class="button add">В корзину</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <div id="gallery">
+        <div class="head_text">галерея</div>
+        <!-- The four columns -->
+        <div class="row">
+          <div class="column">
+            <img src="../static/img/gallery_images/Rectangle%2035.png" alt="1" style="width:100%" onclick="openImage(this);">
+          </div>
+          <div class="column">
+            <img src="../static/img/gallery_images/Rectangle%2043.png" alt="2" style="width:100%" onclick="openImage(this);">
+          </div>
+          <div class="column">
+            <img src="../static/img/gallery_images/Rectangle%2044.png" alt="3" style="width:100%" onclick="openImage(this);">
+          </div>
+          <div class="column">
+            <img src="../static/img/gallery_images/Rectangle%2045.png" alt="4" style="width:100%" onclick="openImage(this);">
+          </div>
+        </div>
+
+        <div class="container">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">×</span>
+          <img id="expandedImg" style="width:100%">
+          <div id="imgtext"></div>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <div class="head_text">контакты</div>
+        <div class="map_img">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d3d0acbaa8b04fdfcb16b211b3f978fe6cb18f58e18a4f4f0ee7e2bc9b3c564&amp;source=constructor" width="100%" height="634" frameborder="0"></iframe>
+        </div>
+    </div>
+
+     <div class="form-popup" id="myForm">
+      <form action="#" class="form-container">
+        <h3>Чтобы совершить покупки зарегистрируйтесь</h3>
+        <label ><b>Имя</b></label>
+        <input type="text" placeholder="Ваше имя" name="name" required>
+        <label ><b>Е-мейл</b></label>
+        <input type="text" placeholder="Ваш е-мейл" name="email" required>
+        <button type="submit" class="btn">Отправить</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+      </form>
+    </div>
+
+
+    <footer>
+        <div id="copyright">© Coffee House 2020</div>
+        <div id="social">
+            <a href="http://vk.com/self_developer"><img src="../static/img/vk.webp" width="32" height="32" alt="VK"></a>
+        </div>
+    </footer>
+
+    <script src="../js/gallery.js"></script>
+
+<!--    скрипт перемещения к нужному блоку-->
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+
+<!--скрипт каунтера корзины-->
+    <script type="text/javascript">
+        var count = 0;
+        $(document).on('ready', function(){
+            var count = 0;
+            var storage = window.localStorage;  // sessionStorage
+            var disp = $('span.counter');
+            if (storage.getItem('count')) {
+                count = parseInt(storage.getItem('count'));
+                disp.html(count);
+            }
+
+            $('.add').on('click', function(){
+                if (storage.getItem('count') != null) {
+                    count = parseInt(storage.getItem('count'));
+                }
+                count++;
+                storage.setItem('count', count);
+                disp.html(count);
+                console.log(storage);
+
+            });
+        });
+    </script>
+
+<!--скрипт формы-->
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block"; }
+
+         function closeForm() {
+            document.getElementById("myForm").style.display = "none";}
+    </script>
+
+<!--скрипт галлереи-->
+    <script>
+        function openImage(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+</body>
+</html>

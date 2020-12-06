@@ -1,0 +1,48 @@
+.nav-elements {
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-flex;
+}
+
+.nav-elements .counter {
+	position: absolute;
+	top: -2px;
+	right: -10px;
+	height: 16px;
+	border-radius: 8px;
+	padding: 0 8px;
+	background-color: #836C58;
+	color: #fff;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 700
+}
+
+.nav-elements .icon {
+	width: 22px;
+	height: 22px;
+	margin-bottom: 1px;
+	color: #001a34;
+	display: inline-block;
+	max-width: 64px;
+	max-height: 64px;
+	pointer-events: none;
+	outline: none;
+	line-height: 0;
+	flex-shrink: 0;
+	overflow: hidden
+}
+
+.nav-elements .desc {
+	color: #001a34;
+	font-size: 14px;
+	line-height: 18px
+}
+
+
+#cart {
+	background-image: url(../img/icons.png);
+	background-position: 0 -2895px
+}
